@@ -1,4 +1,4 @@
-# Factory method design pattern in Swift
+# Factory Method design pattern in Swift
 
 Factory Method design pattern like Abstract Factory also belongs to Creation group of design patterns. It helps to separate creation of objects from using them. This technique increase code reusability, decrease code coupling. The client's code doesn't even know what concrete type of object it works with as factory method returns abstract object (or interface). Only this abstract method implementation knows what type of object should be created, how to create it and how to configure it to be ready to be used by the client.
 

@@ -1,4 +1,4 @@
-#  Abstract factory design pattern in Swift
+#  Abstract Factory design pattern in Swift
 
 Design pattern belongs to Creational group of design patterns. This design pattern used to abstract the  creation of family objects. Objects created from one factory can interact with objects from the same factory, but must not interact with another factory.
 
