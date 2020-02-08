@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821A859223E8963200C4325B /* FactoryMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821A859123E8963200C4325B /* FactoryMethod.swift */; };
 		8274F89D23E5B841002AED6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8274F89C23E5B841002AED6A /* AppDelegate.swift */; };
 		8274F8A123E5B841002AED6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8274F8A023E5B841002AED6A /* ViewController.swift */; };
 		8274F8A423E5B841002AED6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8274F8A223E5B841002AED6A /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		821A859123E8963200C4325B /* FactoryMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryMethod.swift; sourceTree = "<group>"; };
+		821A859323E8964F00C4325B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8274F89923E5B841002AED6A /* Design Patterns in Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Design Patterns in Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8274F89C23E5B841002AED6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8274F8A023E5B841002AED6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		821A859023E8961E00C4325B /* Factory Method */ = {
+			isa = PBXGroup;
+			children = (
+				821A859123E8963200C4325B /* FactoryMethod.swift */,
+				821A859323E8964F00C4325B /* README.md */,
+			);
+			path = "Factory Method";
+			sourceTree = "<group>";
+		};
 		8274F89023E5B841002AED6A = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +107,7 @@
 		8274F8B323E5BBB3002AED6A /* Creational Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				821A859023E8961E00C4325B /* Factory Method */,
 				8274F8B423E5BBCD002AED6A /* Abstract Factory */,
 			);
 			path = "Creational Patterns";
@@ -183,6 +196,7 @@
 				8274F8B623E5BBE8002AED6A /* AbstractFactory.swift in Sources */,
 				8274F8A123E5B841002AED6A /* ViewController.swift in Sources */,
 				8274F89D23E5B841002AED6A /* AppDelegate.swift in Sources */,
+				821A859223E8963200C4325B /* FactoryMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
-#  Abstract factory design pattern
+#  Abstract factory design pattern in Swift
 
 Design pattern belongs to Creational group of design patterns. This design pattern used to abstract the  creation of family objects. Objects created from one factory can interact with objects from the same factory, but must not interact with another factory.
 
-Also all objects in this design pattern are abstracted with interfaces (protocols).
+Also all objects in this design pattern are abstracted with interfaces (protocols) and client of the factory doesn't know how objects are created, what types these objects are.
 
 Let's create an example to see how it works.
 
@@ -90,7 +90,7 @@ struct Order { let drinks: [Drinkable] }
 US Coffee shop:
 
 ```swift
-let usShop = CoffeeShopFactoryProvider.makeFactory()
+let usShop: CoffeeShopFactory = CoffeeShopFactoryProvider.makeFactory()
 
 // It is important that `sugar` must be created from the same
 // factory as drinks.
@@ -105,7 +105,7 @@ let order = Order(drinks: [
 EU Coffee shop:
 
 ```swift
-let euShop = CoffeeShopFactoryProvider.makeFactory()
+let euShop: CoffeeShopFactory = CoffeeShopFactoryProvider.makeFactory()
 
 let order = Order(drinks: [
     euShop.makeCoffee(euShop.makeSugar(spoons: 1)),

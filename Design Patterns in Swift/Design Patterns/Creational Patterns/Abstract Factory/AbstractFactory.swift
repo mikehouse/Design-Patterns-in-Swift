@@ -91,7 +91,7 @@ private final class CoffeeShopFactoryProvider {
 
 private struct Order { let drinks: [Drinkable] }
 
-private let factory = CoffeeShopFactoryProvider.makeFactory()
+private let factory: CoffeeShopFactory = CoffeeShopFactoryProvider.makeFactory()
 
 // It is important that `sugar` must be created from the same
 // factory as drinks.
