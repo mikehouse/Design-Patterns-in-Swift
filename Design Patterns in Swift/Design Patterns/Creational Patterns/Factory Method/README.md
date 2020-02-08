@@ -2,7 +2,7 @@
 
 Factory Method design pattern like Abstract Factory also belongs to Creation group of design patterns. It helps to separate creation of objects from using them. This technique increase code reusability, decrease code coupling. The client's code doesn't even know what concrete type of object it works with as factory method returns abstract object (or interface). Only this abstract method implementation knows what type of object should be created, how to create it and how to configure it to be ready to be used by the client.
 
-Factory Method design principle almost similar to Abstract Factory design pattern and has the same idea in general. We need to describe a factory abstract class with partial implementation and one factory method for objects creation in it, let subclasses choose needed configuration to help the abstract class fully create and configure an object to pass in back to the client (also this can be solved without subclassing but dependency injection).    
+Factory Method design principle almost similar to Abstract Factory design pattern and has the same idea in general. We need to describe a factory abstract class with partial implementation and one factory method for objects creation in it, let subclasses choose a needed configuration to help the abstract class fully create and configure an object to pass in back to the client (also this can be solved without subclassing but dependency injection).    
 
 As we are iOS developers let create en example on the code that we work every day with. We will create a factory that creates database services with different configurations, these configurations will be provided with subclasses of factory abstract class. The client will be allowed to call only one factory method to get a database service object.
 
@@ -148,7 +148,7 @@ class BillingTestsDatabaseProvider: DatabaseFactory {
 }
 ```
 
-From now, we are all set and can create helper class that will give us the database service depending on the configuration.
+From now, we are all set and can create helper class that will give us a database factory depending on the configuration.
 
 ```swift
 enum DatabaseConfiguration {
@@ -160,7 +160,7 @@ enum DatabaseConfiguration {
 
 ```swift
 /// This helper for sure is another factory (via DI), that is factory of the factory.
-/// I've named it with `Provider` just for simplicity because main factory in this article is `DatabaseProvider`.
+/// I've named it with `Provider` just for simplicity because main factory in this article is `DatabaseFactory`.
 
 final class DatabaseFactoryProvider {
     func create(kind: DatabaseConfiguration) -> DatabaseFactory {
@@ -283,11 +283,11 @@ let factory = DatabaseFactoryProvider().create(.app)
 let persistentContainer = try! factory.makePersistentContainer()
 ```
 
-`Note 1` It's better to describe Factory protocol with other protocols, that means instead of returning concrete class `NSPersistentContainer` better return some protocol, the same applies for all properties and methods of the factory, but as we heavily use `CoreData` framework that is hard to abstract it away, then will just stick with it.
+`Note 1` It's better to describe Factory protocol with other protocols, that means instead of returning concrete class `NSPersistentContainer` better return some protocol, the same applies for all properties and methods of the factory, but as we heavily use `CoreData` framework that is hard to abstract away from, then will just stick with it.
 
 `Note 2` You might see that we copy-pasted the code for creation `NSPersistentStoreDescription` object with `In Memory` behaviour, this is good place to extract this logic to another one factory or some more appropriate design pattern.
 
-`Note 3` this factory method design pattern also can be implemented with no subclassing, but dependency injection (DI).
+`Note 3` Factory Method design pattern also can be implemented with no subclassing, but dependency injection (DI).
 
 How it might look like with DI.
 
