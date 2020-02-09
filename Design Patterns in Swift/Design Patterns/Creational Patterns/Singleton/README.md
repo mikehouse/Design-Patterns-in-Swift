@@ -79,7 +79,7 @@ Implementation.
 
 That is called two-step instance initialization. In first check we just check an instance is not created yet, then we acquire the lock on the class and check one more time on nil, and only then we create the object as we are in synchronized block and there no way that instance can be in creation state on second parallel thread.
 
-The beginner in programming might think why do we even need two-step nil check, won't it spend processor time for nothing. Let's see how it would look like with one-step nil check without synchronization block.
+The beginner in programming might think why do we even need two-step nil check, won't it spend processor time for nothing ? Let's see how it would look like with one-step nil check without synchronization block.
 
 ```objectivec
 #import "AppSession.h"
@@ -97,7 +97,7 @@ The beginner in programming might think why do we even need two-step nil check, 
 @end
 ```
 
-Now got race condition, that is the shared data accessed with different threads at the same time. There can be a case when inside `if` statement might be not one but several threads at the same time, and we will get several instances of singleton class that is violation `Singleton` design pattern principle.
+Now we got race condition, that is the shared data accessed from different threads at the same time. There can be a case when inside `if` statement might be not one but several threads at the same time, and we will get several instances of singleton class that is violation `Singleton` design pattern principle.
 
 Okay, let use an example with synchronization.
 
@@ -119,7 +119,7 @@ Okay, let use an example with synchronization.
 @end
 ```
 
-Now we got rid of race condition, but we got redundant lock. It is redundant because after object creation we have no needs for synchronized data access anymore. As you might already now locking the shared data to make it thread safe is very expensive operation, and it will heavily hit our application performance.
+Now we got rid of race condition, but we got redundant lock. It is redundant because after object creation we have no needs for synchronized data access anymore. As you might already know locking the shared data to make it thread safe is very expensive operation, and it will heavily hit our application performance.
 
 Let's talk about `Singleton` design pattern itself.
 
@@ -142,6 +142,7 @@ It is up to you use this design pattern or not. I mostly do not like singletons 
 Let's see how the singleton can be replaced with Service Locator design pattern.
 
 ```swift
+/// Not a singleton now.
 final class AppSession {
     init(dependencies: Dependencies) { }    
     func someMethod() {}
