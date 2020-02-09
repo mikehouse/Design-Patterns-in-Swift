@@ -14,6 +14,7 @@
 		8274F8A623E5B843002AED6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8274F8A523E5B843002AED6A /* Assets.xcassets */; };
 		8274F8A923E5B843002AED6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8274F8A723E5B843002AED6A /* LaunchScreen.storyboard */; };
 		8274F8B623E5BBE8002AED6A /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8274F8B523E5BBE8002AED6A /* AbstractFactory.swift */; };
+		8295DDA023EF442A008ADB0F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8295DD9F23EF442A008ADB0F /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		8274F8AA23E5B843002AED6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8274F8B523E5BBE8002AED6A /* AbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractFactory.swift; sourceTree = "<group>"; };
 		8274F8B723E5BC20002AED6A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8295DD9F23EF442A008ADB0F /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		8295DDA123EF4438008ADB0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,7 @@
 		8274F8B323E5BBB3002AED6A /* Creational Patterns */ = {
 			isa = PBXGroup;
 			children = (
+				8295DD9E23EF4416008ADB0F /* Singleton */,
 				821A859023E8961E00C4325B /* Factory Method */,
 				8274F8B423E5BBCD002AED6A /* Abstract Factory */,
 			);
@@ -120,6 +124,15 @@
 				8274F8B723E5BC20002AED6A /* README.md */,
 			);
 			path = "Abstract Factory";
+			sourceTree = "<group>";
+		};
+		8295DD9E23EF4416008ADB0F /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				8295DD9F23EF442A008ADB0F /* Singleton.swift */,
+				8295DDA123EF4438008ADB0F /* README.md */,
+			);
+			path = Singleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +209,7 @@
 				8274F8B623E5BBE8002AED6A /* AbstractFactory.swift in Sources */,
 				8274F8A123E5B841002AED6A /* ViewController.swift in Sources */,
 				8274F89D23E5B841002AED6A /* AppDelegate.swift in Sources */,
+				8295DDA023EF442A008ADB0F /* Singleton.swift in Sources */,
 				821A859223E8963200C4325B /* FactoryMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
